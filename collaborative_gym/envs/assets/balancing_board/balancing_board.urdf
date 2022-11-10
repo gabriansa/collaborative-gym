@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<robot name="cube">
+
+<link name="base_link">
+
+    <contact>
+        <lateral_friction value="1.0"/>
+    </contact>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.8 1.5 0.04"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 .8 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.8 1.5 0.04"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="0.05"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3"/>
+    </inertial>
+
+</link>
+
+  <link name="link_1">
+
+    <contact>
+        <lateral_friction value="4.0"/>
+    </contact>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.02 0.02 0.18"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 .8 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0.76 0.06"/>
+      <geometry>
+        <box size="0.02 0.02 0.18"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="0.01"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3"/>
+    </inertial>
+
+  </link>
+
+
+  <link name="link_2">
+
+    <contact>
+        <lateral_friction value="4.0"/>
+    </contact>
+
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.02 0.02 0.18"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 .8 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.02 0.02 0.18"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="0.01"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3"/>
+    </inertial>
+
+  </link>
+
+<joint name="joint_1" type="fixed">
+    <origin rpy="1.57 0 0" xyz="0 0.76 0"/>
+    <parent link="base_link"/>
+    <child link="link_1"/>
+    <axis xyz="0.0 0.0 0.0"/>
+    <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
+</joint>
+
+<joint name="joint_2" type="fixed">
+    <origin rpy="-1.57 0 0" xyz="0 -0.76 0"/>
+    <parent link="base_link"/>
+    <child link="link_2"/>
+    <axis xyz="0.0 0.0 0.0"/>
+    <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
+</joint>
+
+</robot>

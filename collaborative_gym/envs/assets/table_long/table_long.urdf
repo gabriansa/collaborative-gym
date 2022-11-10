@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<robot name="table_long">
+
+    <link name="base_link">
+
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="table_long.obj" scale="1 1 1"/>
+                <box size="0.9 1.8 0.9"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0.19"/>
+            <geometry>
+                <box size="0.9 1.8 0.9"/>
+            </geometry>
+        </collision>
+
+        <inertial>
+            <mass value="0.0"/>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+
+
+    </link>
+</robot>

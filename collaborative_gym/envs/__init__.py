@@ -1,0 +1,11 @@
+from collaborative_gym.envs.passing_sawyers import PassTaskSawyersEnv
+from collaborative_gym.envs.passing_jaco_sawyer import PassTaskJacoSawyerEnv
+
+from collaborative_gym.envs.poking_sawyers import PokeTaskSawyersEnv
+from collaborative_gym.envs.poking_panda_sawyer import PokeTaskPandaSawyerEnv
+
+from collaborative_gym.envs.lifting_sawyers import LiftTaskSawyersEnv
+from collaborative_gym.envs.lifting_jacos import LiftTaskJacosEnv
+
+from collaborative_gym.envs.balancing_sawyers import BalanceTaskSawyersEnv
+from collaborative_gym.envs.balancing_jaco_sawyer import BalanceTaskJacoSawyerEnv
